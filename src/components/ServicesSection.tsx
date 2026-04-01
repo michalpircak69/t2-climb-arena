@@ -1,4 +1,4 @@
-import { Mountain, Rope, GraduationCap, Baby, Sun, Users, Cake, TreePine } from "lucide-react";
+import { Mountain, Cable, GraduationCap, Baby, Sun, Users, Cake, TreePine } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const services = [
