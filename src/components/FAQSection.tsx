@@ -19,7 +19,7 @@ const FAQSection = () => (
       <AnimatedSection>
         <Accordion type="single" collapsible className="space-y-3">
           {faqs.map((f, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-xl px-6">
+            <AccordionItem key={i} value={`faq-${i}`} className="bg-card border border-border rounded-xl px-6 shadow-sm">
               <AccordionTrigger className="font-body font-medium text-left hover:text-primary">
                 {f.q}
               </AccordionTrigger>
