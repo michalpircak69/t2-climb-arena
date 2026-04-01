@@ -3,7 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 
 const services = [
   { icon: Mountain, label: "Bouldering" },
-  { icon: Rope, label: "Lezenie na lane" },
+  { icon: Cable, label: "Lezenie na lane" },
   { icon: GraduationCap, label: "Tréningy s inštruktorom" },
   { icon: Baby, label: "Detské krúžky" },
   { icon: Sun, label: "Letné tábory" },
