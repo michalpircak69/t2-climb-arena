@@ -1,4 +1,5 @@
 import AnimatedSection from "./AnimatedSection";
+import { motion } from "framer-motion";
 
 const PricingSection = () => (
   <section id="pricing" className="section-padding bg-secondary/50">
@@ -7,11 +8,14 @@ const PricingSection = () => (
         <h2 className="font-display text-4xl md:text-6xl text-gradient">Cenník</h2>
       </AnimatedSection>
 
-      <AnimatedSection>
-        <div className="bg-card rounded-2xl border border-border overflow-hidden">
+      <AnimatedSection direction="scale">
+        <motion.div
+          whileHover={{ y: -4 }}
+          className="bg-card rounded-2xl border border-border overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+        >
           <table className="w-full font-body">
             <thead>
-              <tr className="border-b border-border">
+              <tr className="border-b border-border bg-muted/30">
                 <th className="px-6 py-4 text-left text-muted-foreground font-medium">Vstup</th>
                 <th className="px-6 py-4 text-right text-muted-foreground font-medium">Cena</th>
               </tr>
@@ -25,13 +29,13 @@ const PricingSection = () => (
                 <td className="px-6 py-4">Deti / mládež</td>
                 <td className="px-6 py-4 text-right font-semibold text-foreground">4 €</td>
               </tr>
-              <tr className="border-b border-border bg-primary/10">
+              <tr className="border-b border-border bg-primary/5">
                 <td className="px-6 py-4">
                   <span className="text-primary font-semibold">⚡ Zľava</span> – Dospelý (do 17:00)
                 </td>
                 <td className="px-6 py-4 text-right font-bold text-primary text-lg">3,50 €</td>
               </tr>
-              <tr className="bg-primary/10">
+              <tr className="bg-primary/5">
                 <td className="px-6 py-4">
                   <span className="text-primary font-semibold">⚡ Zľava</span> – Deti (do 17:00)
                 </td>
@@ -39,7 +43,7 @@ const PricingSection = () => (
               </tr>
             </tbody>
           </table>
-        </div>
+        </motion.div>
         <p className="text-center text-muted-foreground text-sm mt-4 font-body">
           Ceny sú orientačné, aktuálny cenník na mieste.
         </p>

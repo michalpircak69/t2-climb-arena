@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
   { label: "O nás", href: "#about" },
@@ -21,8 +22,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-card/95 backdrop-blur-md shadow-lg border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4">
@@ -36,7 +39,9 @@ const Navbar = () => {
             <a
               key={l.href}
               href={l.href}
-              className="font-body text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+              className={`font-body text-sm font-medium transition-colors hover:text-primary ${
+                scrolled ? "text-foreground/80" : "text-white/90"
+              }`}
             >
               {l.label}
             </a>
@@ -45,7 +50,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
+          className={`md:hidden ${scrolled ? "text-foreground" : "text-white"}`}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -54,22 +59,29 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border">
-          <div className="container mx-auto py-4 flex flex-col gap-4">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="font-body text-lg text-foreground/80 hover:text-primary transition-colors"
-                onClick={() => setOpen(false)}
-              >
-                {l.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-card/95 backdrop-blur-md border-t border-border overflow-hidden"
+          >
+            <div className="container mx-auto py-4 flex flex-col gap-4">
+              {links.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className="font-body text-lg text-foreground/80 hover:text-primary transition-colors"
+                  onClick={() => setOpen(false)}
+                >
+                  {l.label}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

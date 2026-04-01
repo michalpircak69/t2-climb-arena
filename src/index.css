@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 98%;
+    --foreground: 220 20% 15%;
 
-    --card: 0 0% 11%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
 
-    --popover: 0 0% 11%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
 
     --primary: 25 95% 53%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 35 100% 95%;
+    --secondary-foreground: 220 20% 15%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 220 10% 92%;
+    --muted-foreground: 220 10% 40%;
 
     --accent: 25 95% 53%;
     --accent-foreground: 0 0% 100%;
@@ -30,8 +30,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
+    --border: 220 10% 88%;
+    --input: 220 10% 88%;
     --ring: 25 95% 53%;
 
     --radius: 0.75rem;
@@ -39,13 +39,13 @@
     --font-display: 'Bebas Neue', sans-serif;
     --font-body: 'Outfit', sans-serif;
 
-    --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 0 0% 95%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 15%;
     --sidebar-primary: 25 95% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 18%;
+    --sidebar-accent: 35 100% 95%;
+    --sidebar-accent-foreground: 220 20% 15%;
+    --sidebar-border: 220 10% 88%;
     --sidebar-ring: 25 95% 53%;
   }
 }
@@ -73,7 +73,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(35, 100%, 60%));
+    background-image: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(15, 90%, 45%));
   }
 
   .section-padding {
@@ -81,6 +81,6 @@
   }
 
   .glow-orange {
-    box-shadow: 0 0 40px -10px hsl(25, 95%, 53%, 0.4);
+    box-shadow: 0 0 40px -10px hsl(25, 95%, 53%, 0.5);
   }
 }
