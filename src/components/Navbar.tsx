@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import t2Logo from "@/assets/t2-logo.png";
 
 const links = [
   { label: "O nás", href: "#about" },
