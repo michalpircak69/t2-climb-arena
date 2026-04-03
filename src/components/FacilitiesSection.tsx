@@ -2,7 +2,7 @@ import { Dumbbell } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
 
-const items = ["Campus board", "TRX", "Slackline", "Hrazdy", "Tréningová zóna"];
+const items = ["Campus board", "Moon Board", "TRX", "Slackline", "Hrazdy", "Tréningová zóna", "Samoistiace zariadenie", "Požičovňa lezeckej výbavy", "Vonkajšia bouldrovka"];
 
 const FacilitiesSection = () => (
   <section className="section-padding">
