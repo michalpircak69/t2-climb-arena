@@ -10,21 +10,25 @@ import CoursesSection from "@/components/CoursesSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import DecorativeShapes from "@/components/DecorativeShapes";
 
 const Index = () => (
   <>
     <Navbar />
     <main>
       <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <FacilitiesSection />
-      <PricingSection />
-      <HoursSection />
-      <GallerySection />
-      <CoursesSection />
-      <FAQSection />
-      <ContactSection />
+      <div className="relative">
+        <DecorativeShapes />
+        <AboutSection />
+        <ServicesSection />
+        <FacilitiesSection />
+        <PricingSection />
+        <HoursSection />
+        <GallerySection />
+        <CoursesSection />
+        <FAQSection />
+        <ContactSection />
+      </div>
     </main>
     <Footer />
   </>
