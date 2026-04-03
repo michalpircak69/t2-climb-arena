@@ -62,7 +62,7 @@ const ContactSection = () => {
               <div className="flex gap-4 pt-4">
                 <motion.a
                   whileHover={{ scale: 1.1 }}
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/T2boulder/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors shadow-sm"
