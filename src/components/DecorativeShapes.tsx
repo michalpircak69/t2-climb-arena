@@ -69,68 +69,6 @@ const DecorativeShapes = () => {
         </svg>
       </motion.div>
 
-      {/* ===== CLIMBER SILHOUETTES ===== */}
-
-      {/* Climber 1 - hanging from overhang, right side */}
-      <motion.div style={{ y: y2 }} className="absolute top-[18%] right-[8%]">
-        <svg width="60" height="110" viewBox="0 0 60 110" fill="none">
-          {/* rope */}
-          <line x1="30" y1="0" x2="30" y2="25" stroke="hsl(25 50% 40% / 0.15)" strokeWidth="1.5" />
-          {/* head */}
-          <circle cx="30" cy="32" r="7" fill="hsl(20 40% 25% / 0.12)" />
-          {/* body */}
-          <path d="M30 39L28 60L22 80L18 95" stroke="hsl(20 40% 25% / 0.12)" strokeWidth="3" strokeLinecap="round" />
-          <path d="M28 60L38 78L42 92" stroke="hsl(20 40% 25% / 0.12)" strokeWidth="3" strokeLinecap="round" />
-          {/* arms */}
-          <path d="M30 42L18 30L12 20" stroke="hsl(20 40% 25% / 0.12)" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M30 42L42 32L48 22" stroke="hsl(20 40% 25% / 0.12)" strokeWidth="2.5" strokeLinecap="round" />
-        </svg>
-      </motion.div>
-
-      {/* Climber 2 - climbing up, left side */}
-      <motion.div style={{ y: y3 }} className="absolute top-[45%] left-[6%]">
-        <svg width="55" height="120" viewBox="0 0 55 120" fill="none">
-          {/* rope */}
-          <path d="M28 120L26 90L30 60L28 30L30 5" stroke="hsl(25 50% 40% / 0.12)" strokeWidth="1.5" fill="none" />
-          {/* head */}
-          <circle cx="28" cy="28" r="6.5" fill="hsl(20 40% 25% / 0.1)" />
-          {/* body */}
-          <path d="M28 35L26 55L30 75" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="3" strokeLinecap="round" />
-          {/* right leg up */}
-          <path d="M30 75L40 85L45 95" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="2.5" strokeLinecap="round" />
-          {/* left leg down */}
-          <path d="M30 75L22 90L18 105" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="2.5" strokeLinecap="round" />
-          {/* right arm reaching up */}
-          <path d="M28 40L40 28L48 18" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="2.5" strokeLinecap="round" />
-          {/* left arm holding */}
-          <path d="M28 40L15 35L8 28" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="2.5" strokeLinecap="round" />
-        </svg>
-      </motion.div>
-
-      {/* Climber 3 - dynamic move, bottom right */}
-      <motion.div style={{ y: y1 }} className="absolute top-[65%] right-[10%]">
-        <svg width="70" height="100" viewBox="0 0 70 100" fill="none">
-          {/* rope */}
-          <path d="M35 0L34 20L36 35" stroke="hsl(25 50% 40% / 0.12)" strokeWidth="1.5" fill="none" />
-          {/* head */}
-          <circle cx="36" cy="30" r="7" fill="hsl(20 40% 25% / 0.1)" />
-          {/* body leaning */}
-          <path d="M36 37L32 55L28 70" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="3" strokeLinecap="round" />
-          {/* legs spread */}
-          <path d="M28 70L15 85L10 95" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M28 70L40 82L50 90" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="2.5" strokeLinecap="round" />
-          {/* arms */}
-          <path d="M36 42L50 30L58 20" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M36 42L20 38L10 30" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="2.5" strokeLinecap="round" />
-        </svg>
-      </motion.div>
-
-      {/* Climber 4 silhouette - filled, left bottom */}
-      <motion.div style={{ y: y2 }} className="absolute top-[78%] left-[12%]">
-        <svg width="50" height="90" viewBox="0 0 50 90" fill="none">
-          <path d="M25 0L25 15M25 15C21 15 18 18 18 22C18 26 21 29 25 29C29 29 32 26 32 22C32 18 29 15 25 15ZM25 29L23 48L18 65L14 80M23 48L32 62L38 78M25 33L12 22L6 14M25 33L38 24L44 16" stroke="hsl(20 40% 25% / 0.1)" strokeWidth="2.5" strokeLinecap="round" />
-        </svg>
-      </motion.div>
 
       {/* ===== EXISTING DECORATIVE ELEMENTS ===== */}
 
