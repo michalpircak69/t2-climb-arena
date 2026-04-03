@@ -30,8 +30,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4">
-        <a href="#" className="font-display text-3xl tracking-wider text-primary">
-          T2 BOULDER ARENA
+        <a href="#" className="flex items-center gap-2">
+          <img src={t2Logo} alt="T2 Boulder Arena logo" className="h-10 w-auto" />
         </a>
 
         {/* Desktop */}
