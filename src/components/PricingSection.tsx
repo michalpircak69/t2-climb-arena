@@ -30,8 +30,8 @@ const PricingSection = () => (
                 <td className="px-3 sm:px-6 py-3 sm:py-4 text-right font-semibold text-foreground text-sm sm:text-base">5,50 €</td>
               </tr>
               <tr className="border-b border-border">
-                <td className="px-6 py-4">Deti / mládež</td>
-                <td className="px-6 py-4 text-right font-semibold text-foreground">4 €</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">Deti / mládež</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-right font-semibold text-foreground text-sm sm:text-base">4 €</td>
               </tr>
               <tr className="border-b border-border bg-primary/5">
                 <td className="px-6 py-4">
