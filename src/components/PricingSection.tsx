@@ -16,8 +16,8 @@ const PricingSection = () => (
           <table className="w-full font-body">
             <thead>
               <tr className="border-b border-border bg-muted/30">
-                <th className="px-6 py-4 text-left text-muted-foreground font-medium">Vstup</th>
-                <th className="px-6 py-4 text-right text-muted-foreground font-medium">Cena</th>
+                <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-muted-foreground font-medium text-sm sm:text-base">Vstup</th>
+                <th className="px-3 sm:px-6 py-3 sm:py-4 text-right text-muted-foreground font-medium text-sm sm:text-base">Cena</th>
               </tr>
             </thead>
             <tbody>
