@@ -1,20 +1,32 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Loader2 } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast.error("Vyplňte všetky polia");
       return;
     }
-    toast.success("Správa bola odoslaná!");
-    setForm({ name: "", email: "", message: "" });
+
+    setSending(true);
+    try {
+      const mailtoBody = `Meno: ${form.name}\nEmail: ${form.email}\n\nSpráva:\n${form.message}`;
+      const mailtoLink = `mailto:t2boulder@centrum.sk?subject=${encodeURIComponent(`Správa z webu od ${form.name}`)}&body=${encodeURIComponent(mailtoBody)}`;
+      window.location.href = mailtoLink;
+      toast.success("Otváram emailového klienta...");
+      setForm({ name: "", email: "", message: "" });
+    } catch {
+      toast.error("Niečo sa pokazilo, skúste to znova");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -24,7 +36,7 @@ const ContactSection = () => {
           <h2 className="font-display text-4xl md:text-6xl text-gradient">Kontakt</h2>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           <AnimatedSection direction="left">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
@@ -33,7 +45,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-body font-semibold">Adresa</p>
-                  <p className="text-muted-foreground font-body">Štúrova 22/44, 040 01 Košice, Slovakia</p>
+                  <p className="text-muted-foreground font-body text-sm sm:text-base">Štúrova 22/44, 040 01 Košice, Slovakia</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -104,7 +116,7 @@ const ContactSection = () => {
                 placeholder="Meno"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-card border border-border font-body focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all shadow-sm"
+                className="w-full px-4 py-3 rounded-xl bg-card border border-border font-body focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all shadow-sm text-sm sm:text-base"
                 maxLength={100}
               />
               <input
@@ -112,7 +124,7 @@ const ContactSection = () => {
                 placeholder="Email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-card border border-border font-body focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all shadow-sm"
+                className="w-full px-4 py-3 rounded-xl bg-card border border-border font-body focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all shadow-sm text-sm sm:text-base"
                 maxLength={255}
               />
               <textarea
@@ -120,16 +132,24 @@ const ContactSection = () => {
                 rows={5}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full px-4 py-3 rounded-xl bg-card border border-border font-body focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none shadow-sm"
+                className="w-full px-4 py-3 rounded-xl bg-card border border-border font-body focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none shadow-sm text-sm sm:text-base"
                 maxLength={1000}
               />
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full px-8 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-xl hover:brightness-110 transition-all glow-orange text-lg shadow-lg"
+                disabled={sending}
+                className="w-full px-8 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-xl hover:brightness-110 transition-all glow-orange text-base sm:text-lg shadow-lg disabled:opacity-60"
               >
-                Odoslať správu
+                {sending ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Odosielam...
+                  </span>
+                ) : (
+                  "Odoslať správu"
+                )}
               </motion.button>
             </form>
           </AnimatedSection>

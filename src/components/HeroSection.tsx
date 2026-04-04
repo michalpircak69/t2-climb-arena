@@ -1,9 +1,15 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import heroImg from "@/assets/hero-climbing.jpg";
+import heroSlide2 from "@/assets/hero-slide-2.jpg";
+import heroSlide3 from "@/assets/hero-slide-3.jpg";
+import heroSlide4 from "@/assets/hero-slide-4.jpg";
+
+const slides = [heroImg, heroSlide2, heroSlide3, heroSlide4];
 
 const HeroSection = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -13,16 +19,31 @@ const HeroSection = () => {
   const textY = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 3200);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section ref={ref} className="relative h-screen flex items-center justify-center overflow-hidden">
-      <motion.img
-        src={heroImg}
-        alt="T2 Boulder Arena - lezecká stena Košice"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ y: imgY }}
-        width={1920}
-        height={1080}
-      />
+      {/* Slideshow background */}
+      <AnimatePresence mode="popLayout">
+        <motion.img
+          key={currentSlide}
+          src={slides[currentSlide]}
+          alt="T2 Boulder Arena - lezecká stena Košice"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ y: imgY }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          width={1920}
+          height={1080}
+        />
+      </AnimatePresence>
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
 
       <motion.div style={{ y: textY, opacity }} className="relative z-10 text-center px-4 max-w-4xl">
@@ -39,7 +60,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl leading-tight text-white drop-shadow-lg"
+          className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight text-white drop-shadow-lg"
         >
           Najväčšia lezecká stena na východe Slovenska
         </motion.h1>
@@ -48,7 +69,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-6 text-lg md:text-xl text-white/85 font-body max-w-2xl mx-auto"
+          className="mt-6 text-base sm:text-lg md:text-xl text-white/85 font-body max-w-2xl mx-auto"
         >
           Moderné lezecké centrum v Košiciach pre začiatočníkov aj pokročilých
         </motion.p>
@@ -57,17 +78,17 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+          className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
         >
           <a
             href="#contact"
-            className="px-8 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-xl hover:scale-105 transition-all duration-300 glow-orange text-lg shadow-lg"
+            className="px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground font-body font-semibold rounded-xl hover:scale-105 transition-all duration-300 glow-orange text-base sm:text-lg shadow-lg"
           >
             Príď si zaliezť
           </a>
           <a
             href="#pricing"
-            className="px-8 py-4 border-2 border-white/40 text-white font-body font-semibold rounded-xl hover:bg-white hover:text-foreground transition-all duration-300 text-lg backdrop-blur-sm"
+            className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/40 text-white font-body font-semibold rounded-xl hover:bg-white hover:text-foreground transition-all duration-300 text-base sm:text-lg backdrop-blur-sm"
           >
             Zobraziť cenník
           </a>
