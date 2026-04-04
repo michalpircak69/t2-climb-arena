@@ -24,7 +24,7 @@ const HoursSection = () => (
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
               whileHover={{ x: 6 }}
-              className="flex items-center justify-between bg-card border border-border rounded-xl px-6 py-4 shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
+              className="flex items-center justify-between bg-card border border-border rounded-xl px-4 sm:px-6 py-3 sm:py-4 shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
             >
               <div className="flex items-center gap-2 sm:gap-3">
                 <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0" />

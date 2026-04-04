@@ -40,10 +40,10 @@ const PricingSection = () => (
                 <td className="px-3 sm:px-6 py-3 sm:py-4 text-right font-bold text-primary text-base sm:text-lg">3,50 €</td>
               </tr>
               <tr className="bg-primary/5">
-                <td className="px-6 py-4">
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">
                   <span className="text-primary font-semibold">⚡ Zľava</span> – Deti (do 17:00)
                 </td>
-                <td className="px-6 py-4 text-right font-bold text-primary text-lg">3 €</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-right font-bold text-primary text-base sm:text-lg">3 €</td>
               </tr>
             </tbody>
           </table>
