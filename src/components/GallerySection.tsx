@@ -2,20 +2,24 @@ import { useState } from "react";
 import AnimatedSection from "./AnimatedSection";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+import g1 from "@/assets/gallery-new-1.png";
+import g2 from "@/assets/gallery-new-2.png";
+import g3 from "@/assets/gallery-new-3.png";
+import g4 from "@/assets/gallery-new-4.png";
+import g5 from "@/assets/gallery-new-5.png";
+import g6 from "@/assets/gallery-new-6.png";
+import g7 from "@/assets/gallery-new-7.png";
+import g8 from "@/assets/gallery-new-8.png";
 
 const images = [
-  { src: g1, alt: "Lezec na bouldrovej stene" },
-  { src: g2, alt: "Farebné lezecké chyty" },
-  { src: g3, alt: "Detské lezenie" },
-  { src: g4, alt: "Dynamické bouldering" },
-  { src: g5, alt: "Teambuilding v lezeckom centre" },
-  { src: g6, alt: "Tréningová zóna a TRX" },
+  { src: g1, alt: "Boulderová stena" },
+  { src: g2, alt: "Súťaž v lezení" },
+  { src: g3, alt: "Kaviareň s výhľadom na stenu" },
+  { src: g4, alt: "Lezec na stene" },
+  { src: g5, alt: "Lezecká stena s lezcami" },
+  { src: g6, alt: "Farebné lezecké chyty" },
+  { src: g7, alt: "Vysoká lezecká stena" },
+  { src: g8, alt: "Lezec na bouldri" },
 ];
 
 const GallerySection = () => {
@@ -35,9 +39,9 @@ const GallerySection = () => {
             <h2 className="font-display text-4xl md:text-6xl text-gradient">Galéria</h2>
           </AnimatedSection>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {images.map((img, i) => (
-              <AnimatedSection key={i} delay={i * 0.1} direction="scale">
+              <AnimatedSection key={i} delay={i * 0.08} direction="scale">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   className="overflow-hidden rounded-2xl group shadow-md hover:shadow-xl transition-shadow cursor-pointer"
@@ -68,7 +72,6 @@ const GallerySection = () => {
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
             onClick={close}
           >
-            {/* Close */}
             <button
               onClick={close}
               className="absolute top-4 right-4 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
@@ -76,7 +79,6 @@ const GallerySection = () => {
               <X className="w-7 h-7" />
             </button>
 
-            {/* Prev */}
             <button
               onClick={(e) => { e.stopPropagation(); prev(); }}
               className="absolute left-4 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
@@ -84,7 +86,6 @@ const GallerySection = () => {
               <ChevronLeft className="w-8 h-8" />
             </button>
 
-            {/* Next */}
             <button
               onClick={(e) => { e.stopPropagation(); next(); }}
               className="absolute right-4 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
@@ -92,7 +93,6 @@ const GallerySection = () => {
               <ChevronRight className="w-8 h-8" />
             </button>
 
-            {/* Image */}
             <motion.img
               key={selectedIndex}
               initial={{ opacity: 0, scale: 0.9 }}
