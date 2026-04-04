@@ -16,34 +16,34 @@ const PricingSection = () => (
           <table className="w-full font-body">
             <thead>
               <tr className="border-b border-border bg-muted/30">
-                <th className="px-6 py-4 text-left text-muted-foreground font-medium">Vstup</th>
-                <th className="px-6 py-4 text-right text-muted-foreground font-medium">Cena</th>
+                <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-muted-foreground font-medium text-sm sm:text-base">Vstup</th>
+                <th className="px-3 sm:px-6 py-3 sm:py-4 text-right text-muted-foreground font-medium text-sm sm:text-base">Cena</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b border-border">
-                <td className="px-6 py-4">Dospelý</td>
-                <td className="px-6 py-4 text-right font-semibold text-foreground">7,50 €</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">Dospelý</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-right font-semibold text-foreground text-sm sm:text-base">7,50 €</td>
               </tr>
               <tr className="border-b border-border">
-                <td className="px-6 py-4">Študent ISIC , James , HO Metropol</td>
-                <td className="px-6 py-4 text-right font-semibold text-foreground">5,50 €</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">Študent ISIC, James, HO Metropol</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-right font-semibold text-foreground text-sm sm:text-base">5,50 €</td>
               </tr>
               <tr className="border-b border-border">
-                <td className="px-6 py-4">Deti / mládež</td>
-                <td className="px-6 py-4 text-right font-semibold text-foreground">4 €</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">Deti / mládež</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-right font-semibold text-foreground text-sm sm:text-base">4 €</td>
               </tr>
               <tr className="border-b border-border bg-primary/5">
-                <td className="px-6 py-4">
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">
                   <span className="text-primary font-semibold">⚡ Zľava</span> – Dospelý (do 17:00)
                 </td>
-                <td className="px-6 py-4 text-right font-bold text-primary text-lg">3,50 €</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-right font-bold text-primary text-base sm:text-lg">3,50 €</td>
               </tr>
               <tr className="bg-primary/5">
-                <td className="px-6 py-4">
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-base">
                   <span className="text-primary font-semibold">⚡ Zľava</span> – Deti (do 17:00)
                 </td>
-                <td className="px-6 py-4 text-right font-bold text-primary text-lg">3 €</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4 text-right font-bold text-primary text-base sm:text-lg">3 €</td>
               </tr>
             </tbody>
           </table>
