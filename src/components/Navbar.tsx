@@ -29,10 +29,10 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-4">
-        <a href="#" className="flex items-center gap-3">
-          <img src={t2Logo} alt="T2 Boulder Arena logo" className="h-10 w-auto" />
-          <span className={`font-display text-xl tracking-wider transition-colors ${
+      <div className="flex items-center justify-between py-4 px-4 md:px-8 lg:px-12">
+        <a href="#" className="flex items-center gap-2 sm:gap-3">
+          <img src={t2Logo} alt="T2 Boulder Arena logo" className="h-8 sm:h-10 w-auto" />
+          <span className={`font-display text-lg sm:text-xl tracking-wider transition-colors ${
             scrolled ? "text-foreground" : "text-white"
           }`}>
             T2 BOULDER ARENA
@@ -40,12 +40,12 @@ const Navbar = () => {
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className={`font-body text-sm font-medium transition-colors hover:text-primary ${
+              className={`font-body text-base font-medium transition-colors hover:text-primary ${
                 scrolled ? "text-foreground/80" : "text-white/90"
               }`}
             >
