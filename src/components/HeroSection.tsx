@@ -95,13 +95,13 @@ const HeroSection = () => {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - hidden on very small screens */}
       <motion.div
         animate={{ y: [0, 12, 0] }}
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
       >
-        <div className="w-7 h-11 rounded-full border-2 border-white/40 flex justify-center pt-2">
+        <div className="w-6 h-10 sm:w-7 sm:h-11 rounded-full border-2 border-white/40 flex justify-center pt-2">
           <div className="w-1.5 h-3 bg-primary rounded-full" />
         </div>
       </motion.div>
