@@ -19,15 +19,15 @@ const AboutSection = () => (
         </p>
       </AnimatedSection>
 
-      <div className="grid grid-cols-3 gap-6 mt-16">
+      <div className="grid grid-cols-3 gap-3 sm:gap-6 mt-10 sm:mt-16">
         {stats.map((s, i) => (
           <AnimatedSection key={s.label} delay={i * 0.15} direction="scale">
             <motion.div
               whileHover={{ scale: 1.05, y: -4 }}
-              className="text-center p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-lg transition-shadow"
+              className="text-center p-3 sm:p-6 rounded-xl sm:rounded-2xl bg-card border border-border shadow-sm hover:shadow-lg transition-shadow"
             >
-              <div className="font-display text-4xl md:text-5xl text-primary">{s.value}</div>
-              <div className="font-body text-muted-foreground mt-2 text-sm md:text-base">{s.label}</div>
+              <div className="font-display text-2xl sm:text-4xl md:text-5xl text-primary">{s.value}</div>
+              <div className="font-body text-muted-foreground mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">{s.label}</div>
             </motion.div>
           </AnimatedSection>
         ))}

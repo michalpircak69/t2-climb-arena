@@ -60,7 +60,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight text-white drop-shadow-lg"
+          className="font-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight text-white drop-shadow-lg"
         >
           Najväčšia lezecká stena na východe Slovenska
         </motion.h1>
@@ -78,7 +78,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
+          className="mt-6 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
         >
           <a
             href="#contact"
@@ -95,13 +95,13 @@ const HeroSection = () => {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - hidden on very small screens */}
       <motion.div
         animate={{ y: [0, 12, 0] }}
         transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
       >
-        <div className="w-7 h-11 rounded-full border-2 border-white/40 flex justify-center pt-2">
+        <div className="w-6 h-10 sm:w-7 sm:h-11 rounded-full border-2 border-white/40 flex justify-center pt-2">
           <div className="w-1.5 h-3 bg-primary rounded-full" />
         </div>
       </motion.div>
