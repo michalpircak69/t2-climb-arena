@@ -51,9 +51,9 @@ const HeroSection = () => {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="inline-block mb-6 px-5 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm"
+          className="inline-block mb-6"
         >
-          <span className="font-body text-sm font-medium text-white tracking-wide">🧗 KOŠICE, SLOVENSKO</span>
+          <img src={heroBadgeLogo} alt="T2 Boulder Arena logo" className="h-20 sm:h-28 md:h-36 w-auto" />
         </motion.div>
 
         <motion.h1
