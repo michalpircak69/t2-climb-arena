@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import heroImg from "@/assets/hero-climbing.jpg";
 import heroSlide2 from "@/assets/hero-slide-2.jpg";
 import heroSlide3 from "@/assets/hero-slide-3.jpg";
+import heroBadgeLogo from "@/assets/t2-logo-bez-pozadia.png";
 import heroSlide4 from "@/assets/hero-slide-4.jpg";
 
 const slides = [heroImg, heroSlide2, heroSlide3, heroSlide4];
