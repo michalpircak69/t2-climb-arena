@@ -60,7 +60,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight text-white drop-shadow-lg"
+          className="font-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight text-white drop-shadow-lg"
         >
           Najväčšia lezecká stena na východe Slovenska
         </motion.h1>
