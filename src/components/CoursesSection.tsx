@@ -1,6 +1,7 @@
 import { BookOpen, Baby, Sun, Briefcase } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
+import lezec2Img from "@/assets/lezec_2.png";
 
 const courses = [
   { icon: BookOpen, title: "Lezecké kurzy", desc: "Pre úplných začiatočníkov aj mierne pokročilých. Naučíme vás základy techniky a bezpečnosti.", color: "from-orange-400 to-amber-500" },
@@ -10,7 +11,13 @@ const courses = [
 ];
 
 const CoursesSection = () => (
-  <section className="section-padding">
+  <section className="section-padding relative overflow-hidden">
+    <img
+      src={lezec2Img}
+      alt=""
+      className="absolute left-0 top-0 h-[220px] md:h-[280px] w-auto object-contain object-left-top pointer-events-none select-none hidden md:block"
+      aria-hidden="true"
+    />
     <div className="container mx-auto">
       <AnimatedSection className="text-center mb-12">
         <h2 className="font-display text-4xl md:text-6xl text-gradient">Kurzy a aktivity</h2>
