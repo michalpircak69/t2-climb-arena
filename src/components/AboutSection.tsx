@@ -13,7 +13,7 @@ const AboutSection = () => (
     <img
       src={lezecImg}
       alt=""
-      className="absolute left-0 top-0 h-[200px] md:h-[260px] w-auto object-contain object-left-top pointer-events-none select-none hidden md:block"
+      className="absolute left-0 top-0 h-[160px] md:h-[200px] w-auto object-contain object-left-top pointer-events-none select-none hidden md:block"
       aria-hidden="true"
     />
     <div className="container mx-auto max-w-5xl">

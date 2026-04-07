@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import AnimatedSection from "./AnimatedSection";
+import lezecImg from "@/assets/lezec_3.png";
 
 const faqs = [
   { q: "Potrebujem vlastné vybavenie?", a: "Nie, lezečky a magnézium si môžete požičať priamo u nás. Stačí prísť v pohodlnom oblečení." },
