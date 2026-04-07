@@ -1,5 +1,6 @@
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
+import lezecImg from "@/assets/lezec_4.png";
 
 const stats = [
   { value: "15m", label: "Výška steny" },
@@ -8,7 +9,13 @@ const stats = [
 ];
 
 const AboutSection = () => (
-  <section id="about" className="section-padding">
+  <section id="about" className="section-padding relative overflow-hidden">
+    <img
+      src={lezecImg}
+      alt=""
+      className="absolute left-0 top-0 h-[280px] md:h-[350px] w-auto object-contain object-left-top pointer-events-none select-none hidden md:block"
+      aria-hidden="true"
+    />
     <div className="container mx-auto max-w-5xl">
       <AnimatedSection className="text-center">
         <h2 className="font-display text-4xl md:text-6xl text-gradient mb-8">O nás</h2>
