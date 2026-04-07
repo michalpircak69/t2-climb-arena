@@ -11,8 +11,14 @@ const faqs = [
 ];
 
 const FAQSection = () => (
-  <section className="section-padding bg-secondary/50">
-    <div className="container mx-auto max-w-2xl">
+  <section className="section-padding bg-secondary/50 relative overflow-hidden">
+    <img
+      src={lezecImg}
+      alt=""
+      className="absolute right-0 top-0 h-[180px] md:h-[240px] w-auto object-contain object-right-top pointer-events-none select-none hidden md:block"
+      aria-hidden="true"
+    />
+    <div className="container mx-auto max-w-2xl relative z-10">
       <AnimatedSection className="text-center mb-12">
         <h2 className="font-display text-4xl md:text-6xl text-gradient">Často kladené otázky</h2>
       </AnimatedSection>
