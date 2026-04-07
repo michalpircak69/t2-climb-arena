@@ -26,7 +26,7 @@ const ServicesSection = () => (
             <motion.div
               whileHover={{ scale: 1.06, y: -6 }}
               whileTap={{ scale: 0.97 }}
-              className="bg-card rounded-2xl p-6 text-center group border border-border hover:border-primary/30 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
+              className="bg-card rounded-2xl p-6 text-center group border border-border hover:border-primary/30 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer h-full flex flex-col items-center justify-center"
             >
               <div className={`w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow`}>
                 <s.icon className="w-7 h-7 text-white" />
