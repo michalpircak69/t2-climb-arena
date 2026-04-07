@@ -20,7 +20,7 @@ const ServicesSection = () => (
         <h2 className="font-display text-4xl md:text-6xl text-gradient">Lezenie a služby</h2>
       </AnimatedSection>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 items-stretch">
         {services.map((s, i) => (
           <AnimatedSection key={s.label} delay={i * 0.08} direction="scale">
             <motion.div
