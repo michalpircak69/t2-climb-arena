@@ -22,7 +22,7 @@ const ServicesSection = () => (
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5 items-stretch">
         {services.map((s, i) => (
-          <AnimatedSection key={s.label} delay={i * 0.08} direction="scale">
+          <AnimatedSection key={s.label} delay={i * 0.08} direction="scale" className="h-full">
             <motion.div
               whileHover={{ scale: 1.06, y: -6 }}
               whileTap={{ scale: 0.97 }}
