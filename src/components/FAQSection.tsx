@@ -5,8 +5,8 @@ import lezecImg from "@/assets/lezec_3.png";
 const faqs = [
   { q: "Potrebujem vlastné vybavenie?", a: "Nie, lezečky a magnézium si môžete požičať priamo u nás. Stačí prísť v pohodlnom oblečení." },
   { q: "Je lezenie vhodné pre začiatočníkov?", a: "Áno! Máme trasy pre všetky úrovne a naši inštruktori vám radi pomôžu s prvými krokmi na stene." },
-  { q: "Môžem prísť s deťmi?", a: "Samozrejme. Máme špeciálne detské trasy a krúžky. Deti od 5 rokov sú vítané." },
-  { q: "Potrebujem sa vopred objednať?", a: "Na bežné lezenie nie, stačí prísť počas otváracích hodín. Na kurzy a akcie odporúčame rezerváciu vopred." },
+  { q: "Môžem prísť s deťmi?", a: "Samozrejme. Máme špeciálne detské trasy a krúžky. Deti od 4 rokov sú vítané." },
+  { q: "Potrebujem sa vopred objednať?", a: "Na bežné lezenie nie, stačí prísť počas otváracích hodín. Na kurzy, akcie a lezenie s inštruktorom odporúčame rezerváciu vopred." },
   { q: "Ponúkate skupinové zľavy?", a: "Áno, pre skupiny nad 10 osôb ponúkame špeciálne ceny. Kontaktujte nás pre viac informácií." },
 ];
 

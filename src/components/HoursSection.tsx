@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 const hours = [
   { day: "Pondelok – Streda", time: "14:00 – 21:45" },
   { day: "Štvrtok", time: "6:00 – 21:45" },
-  { day: "Piatok – Nedeľa", time: "14:00 – 21:45" },
+  { day: "Piatok – Sobota", time: "14:00 – 21:45" },
+  { day: "Nedeľa", time: "14:00 – 21:00" },
 ];
 
 const HoursSection = () => (

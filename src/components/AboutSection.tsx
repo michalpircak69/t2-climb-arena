@@ -4,8 +4,9 @@ import lezecImg from "@/assets/lezec_4.png";
 
 const stats = [
   { value: "15m", label: "Výška steny" },
-  { value: "100+", label: "Lezeckých trás" },
-  { value: "330m²", label: "Bouldrovka" },
+  { value: "160", label: "Lezeckých trás" },
+  { value: "330m²", label: "Vnútorná bouldrovka" },
+  { value: "240m²", label: "Vonkajšia bouldrovka" },
 ];
 
 const AboutSection = () => (
@@ -26,7 +27,7 @@ const AboutSection = () => (
         </p>
       </AnimatedSection>
 
-      <div className="grid grid-cols-3 gap-3 sm:gap-6 mt-10 sm:mt-16">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mt-10 sm:mt-16">
         {stats.map((s, i) => (
           <AnimatedSection key={s.label} delay={i * 0.15} direction="scale">
             <motion.div
