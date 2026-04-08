@@ -161,15 +161,16 @@ const ServicePage = () => {
               <div className="grid items-start gap-4">
                 <div className="space-y-8">
                   {service.instagramEmbedUrl && (
-                    <div className="mx-auto w-full max-w-3xl">
+                    <div className="mx-auto w-full max-w-[450px]">
                       <h2 className="mb-4 text-xl font-semibold text-foreground">Instagram video</h2>
-                      <div className="w-full overflow-hidden rounded-3xl border border-border bg-black">
+                      <div className="mx-auto w-full overflow-hidden rounded-3xl border border-border bg-black">
                         <iframe
                           src={service.instagramEmbedUrl}
                           title="Instagram video"
                           className="w-full"
-                          style={{ minHeight: 920 }}
+                          style={{ minHeight: 800 }}
                           loading="lazy"
+                          scrolling="no"
                           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                           referrerPolicy="strict-origin-when-cross-origin"
                           sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
