@@ -17,6 +17,7 @@ import rockCourse2 from "@/assets/rock course 2.jpg";
 import rockCourse3 from "@/assets/rock course 3.jpg";
 import rockCourse4 from "@/assets/rock course 4.png";
 import rockCourse5 from "@/assets/rock course 5.png";
+import rockCourse6 from "@/assets/kurz fotka 6.png";
 import summerCampPhoto1 from "@/assets/tabor fotka 1.jpg";
 import summerCampPhoto2 from "@/assets/tabor fotka 2.jpg";
 import summerCampPhoto3 from "@/assets/tabor fotka 3.jpg";
@@ -197,7 +198,7 @@ export const services: ServiceInfo[] = [
       "Vhodné pre menšie skupiny aj individuálne výcviky.",
     ],
     instagramEmbedUrl: "https://www.instagram.com/p/DVlHJ0pDUBH/embed",
-    images: [rockCourse1, rockCourse2, rockCourse3, rockCourse4, rockCourse5],
+    images: [rockCourse1, rockCourse2, rockCourse3, rockCourse4, rockCourse5, rockCourse6],
   },
 ];
 

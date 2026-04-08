@@ -1,15 +1,8 @@
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
-import lezecImg from "@/assets/lezec_5.png";
 
 const PricingSection = () => (
   <section id="pricing" className="section-padding bg-secondary/50 relative overflow-hidden">
-    <img
-      src={lezecImg}
-      alt="Silueta lezcov"
-      className="absolute right-0 top-0 h-[70%] w-auto object-contain object-right pointer-events-none select-none hidden md:block"
-      aria-hidden="true"
-    />
     <div className="container mx-auto max-w-5xl relative z-10">
       <AnimatedSection className="text-center mb-12">
         <h2 className="font-display text-4xl md:text-6xl text-gradient">Cenník</h2>

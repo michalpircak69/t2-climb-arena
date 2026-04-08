@@ -1,6 +1,7 @@
 import { Clock } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
+import lezecImg from "@/assets/lezec_5.png";
 
 const hours = [
   { day: "Pondelok – Streda", time: "14:00 – 21:45" },
@@ -10,8 +11,14 @@ const hours = [
 ];
 
 const HoursSection = () => (
-  <section className="section-padding">
-    <div className="container mx-auto max-w-lg text-center">
+  <section className="section-padding relative overflow-hidden">
+    <img
+      src={lezecImg}
+      alt=""
+      className="pointer-events-none absolute right-0 top-1/2 hidden h-[68%] max-h-[620px] w-auto -translate-y-1/2 select-none object-contain object-right opacity-90 lg:block"
+      aria-hidden="true"
+    />
+    <div className="container relative z-10 mx-auto max-w-lg text-center">
       <AnimatedSection>
         <h2 className="font-display text-4xl md:text-6xl text-gradient mb-12">Otváracie hodiny</h2>
       </AnimatedSection>

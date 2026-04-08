@@ -82,8 +82,8 @@ const ServicePage = () => {
                       className={
                         service.id === "summer-camps"
                           ? "w-full max-w-4xl rounded-3xl border border-border/50 object-contain shadow-lg"
-                          : service.id === "kids-clubs"
-                            ? "w-full max-w-xl rounded-3xl border border-border/50 object-contain shadow-lg"
+                        : service.id === "kids-clubs"
+                            ? "w-full max-w-lg rounded-3xl border border-border/50 object-contain shadow-lg"
                             : "w-full max-w-3xl rounded-3xl border border-border/50 object-contain shadow-lg"
                       }
                     />
@@ -202,6 +202,8 @@ const ServicePage = () => {
                         ? "mx-auto grid max-w-5xl grid-cols-1 gap-4 pt-28 sm:grid-cols-2"
                         : service.id === "kids-clubs"
                           ? "mx-auto grid max-w-4xl grid-cols-1 gap-4 pt-10 sm:grid-cols-2"
+                        : service.id === "rock-courses"
+                          ? "mx-auto grid max-w-3xl grid-cols-1 gap-4 pt-8 sm:grid-cols-2"
                         : "grid grid-cols-1 gap-x-2 gap-y-1 pt-4 sm:grid-cols-2"
                     }
                   >
@@ -216,6 +218,8 @@ const ServicePage = () => {
                               ? "h-72 w-full cursor-pointer rounded-3xl object-cover transition-transform duration-300 hover:scale-[1.01]"
                               : service.id === "kids-clubs"
                                 ? "h-80 w-full cursor-pointer rounded-3xl object-cover object-center transition-transform duration-300 hover:scale-[1.01]"
+                                : service.id === "rock-courses"
+                                  ? "h-[24rem] w-full cursor-pointer rounded-3xl object-cover object-center transition-transform duration-300 hover:scale-[1.01]"
                               : "h-44 w-full cursor-pointer rounded-3xl object-cover transition-transform duration-300 hover:scale-[1.01]"
                           }
                         />

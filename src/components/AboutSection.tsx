@@ -14,10 +14,10 @@ const AboutSection = () => (
     <img
       src={lezecImg}
       alt=""
-      className="absolute left-0 top-0 h-[220px] md:h-[300px] w-auto object-contain object-left-top pointer-events-none select-none hidden md:block"
+      className="pointer-events-none absolute left-0 top-0 hidden h-[150px] w-auto select-none object-contain object-left-top opacity-95 md:block lg:h-[180px] xl:h-[200px]"
       aria-hidden="true"
     />
-    <div className="container mx-auto max-w-5xl">
+    <div className="container relative z-10 mx-auto max-w-5xl">
       <AnimatedSection className="text-center">
         <h2 className="font-display text-4xl md:text-6xl text-gradient mb-8">O nás</h2>
         <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">
