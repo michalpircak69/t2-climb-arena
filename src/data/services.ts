@@ -1,8 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import { Mountain, Cable, GraduationCap, Baby, Sun, Users, Cake, TreePine } from "lucide-react";
 import gallery1 from "@/assets/gallery-new-1.png";
-import gallery2 from "@/assets/gallery-new-2.png";
-import gallery3 from "@/assets/gallery-new-3.png";
 import gallery4 from "@/assets/gallery-new-4.png";
 import gallery5 from "@/assets/gallery-new-5.png";
 import gallery6 from "@/assets/gallery-new-6.png";
@@ -16,6 +14,10 @@ import rockCourse2 from "@/assets/rock course 2.jpg";
 import rockCourse3 from "@/assets/rock course 3.jpg";
 import rockCourse4 from "@/assets/rock course 4.png";
 import rockCourse5 from "@/assets/rock course 5.png";
+import summerCampPhoto1 from "@/assets/tabor fotka 1.jpg";
+import summerCampPhoto2 from "@/assets/tabor fotka 2.jpg";
+import summerCampPhoto3 from "@/assets/tabor fotka 3.jpg";
+import summerCampPhoto4 from "@/assets/fotka tabor 4.jpg";
 import outdoorBouldering1 from "@/assets/vonkajsia 1.jpg";
 import outdoorBouldering2 from "@/assets/vonkajsia 2.jpg";
 import outdoorBouldering3 from "@/assets/vonkajsia 3.jpg";
@@ -37,6 +39,7 @@ export interface ServiceInfo {
   images: string[];
   instagramEmbedUrl?: string;
   flyer?: string;
+  secondaryImage?: string;
   sections?: ServiceSection[];
 }
 
@@ -124,14 +127,15 @@ export const services: ServiceInfo[] = [
     icon: Sun,
     color: "from-sky-400 to-blue-500",
     description:
-      "Letné tábory s lezeckým programom, tímovými aktivitami a bezpečným prostredím pre deti i dospelých.",
+      "Letné tábory s lezeckým programom, tímovými aktivitami a bezpečným prostredím pre deti.",
     details: [
       "Denný program kombinuje horolezecké tréningy a zážitkové aktivity.",
       "Výbava a dohľad sú zabezpečené profesionálnym tímom.",
       "Tábor je vhodný pre deti, tínedžerov aj začínajúcich lezcov.",
     ],
     flyer: "/summer-camp-flyer.jpg",
-    images: [gallery2, gallery3],
+    secondaryImage: "/summer-camp-schedule.png",
+    images: [summerCampPhoto1, summerCampPhoto2, summerCampPhoto3, summerCampPhoto4],
   },
   {
     id: "teambuilding",

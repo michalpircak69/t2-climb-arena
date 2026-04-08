@@ -47,7 +47,7 @@ const ServicePage = () => {
           </a>
 
           <div className="space-y-8">
-            <div className={service.flyer ? "grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_380px]" : undefined}>
+            <div className={service.flyer ? "grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_440px]" : undefined}>
               <div className="space-y-3">
                 <h1 className="font-display text-4xl text-foreground md:text-5xl">{service.label}</h1>
                 <p className="max-w-2xl text-lg text-muted-foreground">{service.description}</p>
@@ -56,6 +56,15 @@ const ServicePage = () => {
                     {detail}
                   </p>
                 ))}
+                {service.secondaryImage && (
+                  <div className="pt-4">
+                    <img
+                      src={service.secondaryImage}
+                      alt={`Harmonogram ${service.label}`}
+                      className="w-full max-w-3xl rounded-3xl border border-border/50 object-contain shadow-lg"
+                    />
+                  </div>
+                )}
               </div>
 
               {service.flyer && (
@@ -63,7 +72,7 @@ const ServicePage = () => {
                   <img
                     src={service.flyer}
                     alt={`Leták ${service.label}`}
-                    className="w-full max-w-[380px] rounded-3xl object-cover shadow-lg"
+                    className="w-full max-w-[440px] rounded-3xl object-cover shadow-lg"
                   />
                 </div>
               )}
@@ -124,14 +133,24 @@ const ServicePage = () => {
                     </div>
                   )}
 
-                  <div className="grid grid-cols-1 gap-x-2 gap-y-1 pt-4 sm:grid-cols-2">
+                  <div
+                    className={
+                      service.id === "summer-camps"
+                        ? "grid max-w-5xl grid-cols-1 gap-4 pt-10 sm:grid-cols-2"
+                        : "grid grid-cols-1 gap-x-2 gap-y-1 pt-4 sm:grid-cols-2"
+                    }
+                  >
                     {service.images.map((src, index) => (
                       <div key={index} className="overflow-hidden rounded-3xl">
                         <img
                           src={src}
                           alt={`${service.label} ${index + 1}`}
                           onClick={() => setSelectedImageIndex(index)}
-                          className="h-44 w-full cursor-pointer rounded-3xl object-cover transition-transform duration-300 hover:scale-[1.01]"
+                          className={
+                            service.id === "summer-camps"
+                              ? "h-72 w-full cursor-pointer rounded-3xl object-cover transition-transform duration-300 hover:scale-[1.01]"
+                              : "h-44 w-full cursor-pointer rounded-3xl object-cover transition-transform duration-300 hover:scale-[1.01]"
+                          }
                         />
                       </div>
                     ))}
