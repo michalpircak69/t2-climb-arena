@@ -8,14 +8,17 @@ import gallery5 from "@/assets/gallery-new-5.png";
 import gallery6 from "@/assets/gallery-new-6.png";
 import gallery7 from "@/assets/gallery-new-7.png";
 import gallery8 from "@/assets/gallery-new-8.png";
-import indoorBouldering1 from "@/assets/gallery-1.jpg";
-import indoorBouldering2 from "@/assets/gallery-2.jpg";
-import indoorBouldering3 from "@/assets/gallery-3.jpg";
+import indoorBouldering1 from "@/assets/vnutrona 1.jpg";
+import indoorBouldering2 from "@/assets/vnutorna 2.jpeg";
+import indoorBouldering3 from "@/assets/vnutorna 3.jpeg";
 import rockCourse1 from "@/assets/rock course 1.jpg";
 import rockCourse2 from "@/assets/rock course 2.jpg";
 import rockCourse3 from "@/assets/rock course 3.jpg";
 import rockCourse4 from "@/assets/rock course 4.png";
 import rockCourse5 from "@/assets/rock course 5.png";
+import outdoorBouldering1 from "@/assets/vonkajsia 1.jpg";
+import outdoorBouldering2 from "@/assets/vonkajsia 2.jpg";
+import outdoorBouldering3 from "@/assets/vonkajsia 3.jpg";
 
 export interface ServiceSection {
   title: string;
@@ -64,7 +67,7 @@ export const services: ServiceInfo[] = [
           "Trasy sú vhodné na doplnkový tréning techniky, sily a istoty pri lezení mimo indoor steny.",
           "Je to skvelá možnosť pre lezcov, ktorí chcú spojiť tréning so zážitkom v exteriéri.",
         ],
-        images: [rockCourse1, rockCourse2, rockCourse3],
+        images: [outdoorBouldering1, outdoorBouldering2, outdoorBouldering3],
       },
     ],
     images: [],

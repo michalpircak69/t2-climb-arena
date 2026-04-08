@@ -105,16 +105,16 @@ const ServicePage = () => {
               </div>
             ) : (
               <div className="grid items-start gap-4">
-                <div className="space-y-4">
+                <div className="space-y-8">
                   {service.instagramEmbedUrl && (
-                    <div>
+                    <div className="mx-auto w-full max-w-3xl">
                       <h2 className="mb-4 text-xl font-semibold text-foreground">Instagram video</h2>
                       <div className="w-full overflow-hidden rounded-3xl border border-border bg-black">
                         <iframe
                           src={service.instagramEmbedUrl}
                           title="Instagram video"
                           className="w-full"
-                          style={{ minHeight: 820 }}
+                          style={{ minHeight: 920 }}
                           loading="lazy"
                           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                           referrerPolicy="strict-origin-when-cross-origin"
@@ -124,7 +124,7 @@ const ServicePage = () => {
                     </div>
                   )}
 
-                  <div className="grid grid-cols-1 gap-x-2 gap-y-1 sm:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-x-2 gap-y-1 pt-4 sm:grid-cols-2">
                     {service.images.map((src, index) => (
                       <div key={index} className="overflow-hidden rounded-3xl">
                         <img
