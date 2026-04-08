@@ -4,6 +4,7 @@ import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DecorativeShapes from "@/components/DecorativeShapes";
 import { getServiceById } from "@/data/services";
 
 const ServicePage = () => {
@@ -37,8 +38,10 @@ const ServicePage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main className="section-padding">
-        <div className="container mx-auto">
+      <main className="relative overflow-hidden bg-secondary/50 section-padding">
+        <DecorativeShapes />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.08),transparent_28%),radial-gradient(circle_at_top_right,rgba(236,72,153,0.08),transparent_24%),radial-gradient(circle_at_65%_45%,rgba(59,130,246,0.06),transparent_22%)]" />
+        <div className="container mx-auto relative">
           <a
             href="/#services"
             className="mb-8 inline-flex items-center rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition hover:bg-muted"
@@ -48,21 +51,63 @@ const ServicePage = () => {
 
           <div className="space-y-8">
             <div className={service.flyer ? "grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_440px]" : undefined}>
-              <div className="space-y-3">
+              <div className={service.id === "kids-clubs" ? "space-y-3 text-center" : "space-y-3"}>
                 <h1 className="font-display text-4xl text-foreground md:text-5xl">{service.label}</h1>
-                <p className="max-w-2xl text-lg text-muted-foreground">{service.description}</p>
+                <p className={service.id === "kids-clubs" ? "mx-auto max-w-2xl text-lg text-muted-foreground" : "max-w-2xl text-lg text-muted-foreground"}>
+                  {service.description}
+                </p>
                 {service.details.map((detail, index) => (
-                  <p key={index} className="max-w-2xl text-base leading-8 text-foreground/90">
+                  <p
+                    key={index}
+                    className={
+                      service.id === "kids-clubs"
+                        ? "mx-auto max-w-2xl text-base leading-8 text-foreground/90"
+                        : "max-w-2xl text-base leading-8 text-foreground/90"
+                    }
+                  >
                     {detail}
                   </p>
                 ))}
                 {service.secondaryImage && (
-                  <div className="pt-4">
+                  <div
+                    className={
+                      service.id === "kids-clubs"
+                        ? "flex justify-center pt-10"
+                        : "pt-4"
+                    }
+                  >
                     <img
                       src={service.secondaryImage}
                       alt={`Harmonogram ${service.label}`}
-                      className="w-full max-w-3xl rounded-3xl border border-border/50 object-contain shadow-lg"
+                      className={
+                        service.id === "summer-camps"
+                          ? "w-full max-w-4xl rounded-3xl border border-border/50 object-contain shadow-lg"
+                          : service.id === "kids-clubs"
+                            ? "w-full max-w-xl rounded-3xl border border-border/50 object-contain shadow-lg"
+                            : "w-full max-w-3xl rounded-3xl border border-border/50 object-contain shadow-lg"
+                      }
                     />
+                  </div>
+                )}
+
+                {service.extraBlockTitle && service.extraBlockImage && (
+                  <div className="space-y-5 pt-12">
+                    <div className="space-y-3 text-center">
+                      <h2 className="font-display text-3xl text-foreground md:text-4xl">{service.extraBlockTitle}</h2>
+                      {service.extraBlockDescription && (
+                        <p className="mx-auto max-w-2xl text-base leading-8 text-foreground/90">
+                          {service.extraBlockDescription}
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="flex justify-center">
+                      <img
+                        src={service.extraBlockImage}
+                        alt={service.extraBlockTitle}
+                        className="w-full max-w-xl rounded-3xl border border-border/50 object-contain shadow-lg"
+                      />
+                    </div>
                   </div>
                 )}
               </div>
@@ -133,10 +178,30 @@ const ServicePage = () => {
                     </div>
                   )}
 
+                  {service.downloads && (
+                    <div className="pt-10">
+                      <h2 className="mb-5 text-3xl font-semibold text-foreground md:text-4xl">Prihlášky:</h2>
+                      <div className="flex flex-wrap gap-3">
+                        {service.downloads.map((download) => (
+                          <a
+                            key={download.href}
+                            href={download.href}
+                            download
+                            className="inline-flex items-center rounded-full border border-border bg-card px-6 py-4 text-base font-semibold text-foreground transition hover:bg-muted md:text-lg"
+                          >
+                            {download.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   <div
                     className={
                       service.id === "summer-camps"
-                        ? "grid max-w-5xl grid-cols-1 gap-4 pt-10 sm:grid-cols-2"
+                        ? "mx-auto grid max-w-5xl grid-cols-1 gap-4 pt-28 sm:grid-cols-2"
+                        : service.id === "kids-clubs"
+                          ? "mx-auto grid max-w-4xl grid-cols-1 gap-4 pt-10 sm:grid-cols-2"
                         : "grid grid-cols-1 gap-x-2 gap-y-1 pt-4 sm:grid-cols-2"
                     }
                   >
@@ -149,6 +214,8 @@ const ServicePage = () => {
                           className={
                             service.id === "summer-camps"
                               ? "h-72 w-full cursor-pointer rounded-3xl object-cover transition-transform duration-300 hover:scale-[1.01]"
+                              : service.id === "kids-clubs"
+                                ? "h-80 w-full cursor-pointer rounded-3xl object-cover object-center transition-transform duration-300 hover:scale-[1.01]"
                               : "h-44 w-full cursor-pointer rounded-3xl object-cover transition-transform duration-300 hover:scale-[1.01]"
                           }
                         />

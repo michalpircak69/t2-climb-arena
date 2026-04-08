@@ -5,7 +5,10 @@ import gallery4 from "@/assets/gallery-new-4.png";
 import gallery5 from "@/assets/gallery-new-5.png";
 import gallery6 from "@/assets/gallery-new-6.png";
 import gallery7 from "@/assets/gallery-new-7.png";
-import gallery8 from "@/assets/gallery-new-8.png";
+import kidsClubPhoto1 from "@/assets/detsky kruzok 1.jpg";
+import kidsClubPhoto2 from "@/assets/detsky kruzok 2.jpg";
+import kidsClubPhoto3 from "@/assets/detsky kruzok 3.jpg";
+import kidsClubPhoto4 from "@/assets/detsky kruzok 4.jpg";
 import indoorBouldering1 from "@/assets/vnutrona 1.jpg";
 import indoorBouldering2 from "@/assets/vnutorna 2.jpeg";
 import indoorBouldering3 from "@/assets/vnutorna 3.jpeg";
@@ -40,6 +43,10 @@ export interface ServiceInfo {
   instagramEmbedUrl?: string;
   flyer?: string;
   secondaryImage?: string;
+  extraBlockTitle?: string;
+  extraBlockDescription?: string;
+  extraBlockImage?: string;
+  downloads?: { label: string; href: string }[];
   sections?: ServiceSection[];
 }
 
@@ -118,7 +125,12 @@ export const services: ServiceInfo[] = [
       "Deti sa naučia základy pohybu na stene, zostupov a bezpečného pádu.",
       "Skvelé pre pravidelný športový rozvoj a zábavu v kolektíve.",
     ],
-    images: [gallery8, gallery1],
+    secondaryImage: "/kids-club-flyer.png",
+    extraBlockTitle: "PRE NAJMENŠÍCH",
+    extraBlockDescription:
+      "Lezecký krúžok pre najmenšie deti je zameraný na hravý pohyb, základnú koordináciu a prvé zoznámenie sa s lezeckou stenou v bezpečnom prostredí.",
+    extraBlockImage: "/kids-club-youngest-flyer.png",
+    images: [kidsClubPhoto1, kidsClubPhoto2, kidsClubPhoto3, kidsClubPhoto4],
   },
   {
     id: "summer-camps",
@@ -135,6 +147,10 @@ export const services: ServiceInfo[] = [
     ],
     flyer: "/summer-camp-flyer.jpg",
     secondaryImage: "/summer-camp-schedule.png",
+    downloads: [
+      { label: "Prihláška PDF", href: "/prihlaska-tabor.pdf" },
+      { label: "Prihláška ODT", href: "/prihlaska-tabor.odt" },
+    ],
     images: [summerCampPhoto1, summerCampPhoto2, summerCampPhoto3, summerCampPhoto4],
   },
   {
