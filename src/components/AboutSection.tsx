@@ -21,9 +21,7 @@ const AboutSection = () => (
       <AnimatedSection className="text-center">
         <h2 className="font-display text-4xl md:text-6xl text-gradient mb-8">O nás</h2>
         <p className="text-lg md:text-xl text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">
-          T2 Boulder Arena je moderné lezecké centrum v Košiciach. Ponúka bouldering aj lezenie na lane
-          v bezpečnom indoor prostredí. Stena dosahuje výšku až 15 metrov a ponúka viac ako 100 lezeckých
-          trás rôznych obtiažností. Centrum je vhodné pre začiatočníkov, pokročilých lezcov, deti aj skupiny.
+          T2 Boulder Arena je moderné lezecké centrum v Košiciach. Ponúka bouldering aj lezenie na lane v bezpečnom indoor prostredí. Stena vpredu dosahuje výšku až 15 metrov (320m²), zadná stena dosahuje výšku 14 metrov (320m²) a ponúkajú 160 lezeckých trás rôznych obtiažností. Centrum je vhodné pre začiatočníkov, pokročilých lezcov, deti aj skupiny.
         </p>
       </AnimatedSection>
 

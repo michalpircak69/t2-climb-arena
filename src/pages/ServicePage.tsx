@@ -43,6 +43,23 @@ const ServicePage = () => {
                   {detail}
                 </p>
               ))}
+
+              {service.instagramEmbedUrl && (
+                <div className="mt-6">
+                  <h2 className="font-semibold text-xl text-foreground mb-4">Instagram video</h2>
+                  <div className="aspect-video w-full overflow-hidden rounded-3xl border border-border bg-black">
+                    <iframe
+                      src={service.instagramEmbedUrl}
+                      title="Instagram video"
+                      className="h-full w-full"
+                      loading="lazy"
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
             <div className="grid gap-4">
               {service.images.map((src, index) => (

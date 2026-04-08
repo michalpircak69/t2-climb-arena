@@ -18,6 +18,7 @@ export interface ServiceInfo {
   description: string;
   details: string[];
   images: string[];
+  instagramEmbedUrl?: string;
 }
 
 export const services: ServiceInfo[] = [
@@ -139,6 +140,7 @@ export const services: ServiceInfo[] = [
       "Kurz je vedený skúsenými inštruktormi s dôrazom na bezpečnosť.",
       "Vhodné pre menšie skupiny aj individuálne výcviky.",
     ],
+    instagramEmbedUrl: "https://www.instagram.com/p/DVlHJ0pDUBH/embed",
     images: [gallery8, gallery1],
   },
 ];
