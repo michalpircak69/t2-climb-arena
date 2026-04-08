@@ -7,7 +7,7 @@ const PricingSection = () => (
     <img
       src={lezecImg}
       alt="Silueta lezcov"
-      className="absolute right-0 top-0 h-full w-auto object-contain object-right pointer-events-none select-none hidden md:block"
+      className="absolute right-0 top-0 h-[70%] w-auto object-contain object-right pointer-events-none select-none hidden md:block"
       aria-hidden="true"
     />
     <div className="container mx-auto max-w-5xl relative z-10">
