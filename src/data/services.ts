@@ -8,6 +8,20 @@ import gallery5 from "@/assets/gallery-new-5.png";
 import gallery6 from "@/assets/gallery-new-6.png";
 import gallery7 from "@/assets/gallery-new-7.png";
 import gallery8 from "@/assets/gallery-new-8.png";
+import indoorBouldering1 from "@/assets/gallery-1.jpg";
+import indoorBouldering2 from "@/assets/gallery-2.jpg";
+import indoorBouldering3 from "@/assets/gallery-3.jpg";
+import rockCourse1 from "@/assets/rock course 1.jpg";
+import rockCourse2 from "@/assets/rock course 2.jpg";
+import rockCourse3 from "@/assets/rock course 3.jpg";
+import rockCourse4 from "@/assets/rock course 4.png";
+import rockCourse5 from "@/assets/rock course 5.png";
+
+export interface ServiceSection {
+  title: string;
+  details: string[];
+  images: string[];
+}
 
 export interface ServiceInfo {
   id: string;
@@ -19,6 +33,8 @@ export interface ServiceInfo {
   details: string[];
   images: string[];
   instagramEmbedUrl?: string;
+  flyer?: string;
+  sections?: ServiceSection[];
 }
 
 export const services: ServiceInfo[] = [
@@ -30,12 +46,28 @@ export const services: ServiceInfo[] = [
     color: "from-orange-400 to-orange-600",
     description:
       "Bouldering pre všetky úrovne v modernom boulderovom priestore. Ideálne pre tých, ktorí chcú zlepšiť silu, techniku a rýchly progres.",
-    details: [
-      "Vo vnútri nájdete rôznorodé lezecké cesty a bloky s rôznymi obtiažnosťami.",
-      "Bezpečné pády na mäkké matrace, vybavenie v cene a možnosť inštruktážnych tipov.",
-      "Pre jednotlivcov aj skupiny je to skvelá voľba na tréning a zábavu.",
+    details: [],
+    sections: [
+      {
+        title: "Vnútorná bouldrovka",
+        details: [
+          "Vo vnútri nájdete rôznorodé lezecké cesty a bloky s rôznymi obtiažnosťami.",
+          "Bezpečné pády na mäkké matrace, vybavenie v cene a možnosť inštruktážnych tipov.",
+          "Pre jednotlivcov aj skupiny je to skvelá voľba na tréning a zábavu.",
+        ],
+        images: [indoorBouldering1, indoorBouldering2, indoorBouldering3],
+      },
+      {
+        title: "Vonkajšia bouldrovka",
+        details: [
+          "Vo vonkajšom priestore si môžete vyskúšať lezenie na prírodných profiloch a užiť si pohyb na čerstvom vzduchu.",
+          "Trasy sú vhodné na doplnkový tréning techniky, sily a istoty pri lezení mimo indoor steny.",
+          "Je to skvelá možnosť pre lezcov, ktorí chcú spojiť tréning so zážitkom v exteriéri.",
+        ],
+        images: [rockCourse1, rockCourse2, rockCourse3],
+      },
     ],
-    images: [gallery1, gallery2, gallery3],
+    images: [],
   },
   {
     id: "climbing-on-rope",
@@ -95,6 +127,7 @@ export const services: ServiceInfo[] = [
       "Výbava a dohľad sú zabezpečené profesionálnym tímom.",
       "Tábor je vhodný pre deti, tínedžerov aj začínajúcich lezcov.",
     ],
+    flyer: "/summer-camp-flyer.jpg",
     images: [gallery2, gallery3],
   },
   {
@@ -141,7 +174,7 @@ export const services: ServiceInfo[] = [
       "Vhodné pre menšie skupiny aj individuálne výcviky.",
     ],
     instagramEmbedUrl: "https://www.instagram.com/p/DVlHJ0pDUBH/embed",
-    images: [gallery8, gallery1],
+    images: [rockCourse1, rockCourse2, rockCourse3, rockCourse4, rockCourse5],
   },
 ];
 
