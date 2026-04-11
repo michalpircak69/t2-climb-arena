@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Mountain, Cable, GraduationCap, Baby, Sun, Users, Cake, TreePine } from "lucide-react";
+import { Mountain, Cable, GraduationCap, Baby, Sun, Users, Cake, TreePine, School } from "lucide-react";
 import gallery1 from "@/assets/gallery-new-1.png";
 import gallery4 from "@/assets/gallery-new-4.png";
 import gallery5 from "@/assets/gallery-new-5.png";
@@ -144,7 +144,7 @@ export const services: ServiceInfo[] = [
     details: [
       "Denný program kombinuje horolezecké tréningy a zážitkové aktivity.",
       "Výbava a dohľad sú zabezpečené profesionálnym tímom.",
-      "Tábor je vhodný pre deti, tínedžerov aj začínajúcich lezcov.",
+      "Tábor je vhodný pre deti, tínedžerov aj začiatočníkov.",
     ],
     flyer: "/summer-camp-flyer.jpg",
     secondaryImage: "/summer-camp-schedule.png",
@@ -183,6 +183,22 @@ export const services: ServiceInfo[] = [
       "Skvelá voľba pre aktívne a nezabudnuteľné narodeniny.",
     ],
     images: [gallery6, gallery7],
+  },
+  {
+    id: "school-trips",
+    label: "Zážitkový výlet pre škôlky a školy",
+    href: "/services/school-trips",
+    icon: School,
+    color: "from-cyan-400 to-sky-600",
+    description:
+      "Zážitkový lezecký program pre materské, základné aj stredné školy, ktorý spája pohyb, spoluprácu a bezpečnú zábavu.",
+    details: [
+      "Pripravíme program podľa veku detí, veľkosti skupiny a časových možností vašej školy alebo škôlky.",
+      "Deti si vyskúšajú lezenie hravou formou, základnú prácu s pohybom na stene a jednoduché tímové aktivity.",
+      "Počas celého programu je zabezpečený dohľad inštruktorov, potrebné vybavenie aj bezpečné zázemie pre skupinu.",
+    ],
+    secondaryImage: "/school-trip-flyer.jpg",
+    images: [gallery1, gallery4, gallery5],
   },
   {
     id: "rock-courses",

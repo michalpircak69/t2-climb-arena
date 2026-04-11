@@ -51,16 +51,26 @@ const ServicePage = () => {
 
           <div className="space-y-8">
             <div className={service.flyer ? "grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_440px]" : undefined}>
-              <div className={service.id === "kids-clubs" ? "space-y-3 text-center" : "space-y-3"}>
+              <div
+                className={
+                  service.id === "kids-clubs" || service.id === "school-trips" ? "space-y-5 text-center" : "space-y-3"
+                }
+              >
                 <h1 className="font-display text-4xl text-foreground md:text-5xl">{service.label}</h1>
-                <p className={service.id === "kids-clubs" ? "mx-auto max-w-2xl text-lg text-muted-foreground" : "max-w-2xl text-lg text-muted-foreground"}>
+                <p
+                  className={
+                    service.id === "kids-clubs" || service.id === "school-trips"
+                      ? "mx-auto max-w-2xl text-lg text-muted-foreground"
+                      : "max-w-2xl text-lg text-muted-foreground"
+                  }
+                >
                   {service.description}
                 </p>
                 {service.details.map((detail, index) => (
                   <p
                     key={index}
                     className={
-                      service.id === "kids-clubs"
+                      service.id === "kids-clubs" || service.id === "school-trips"
                         ? "mx-auto max-w-2xl text-base leading-8 text-foreground/90"
                         : "max-w-2xl text-base leading-8 text-foreground/90"
                     }
@@ -71,7 +81,7 @@ const ServicePage = () => {
                 {service.secondaryImage && (
                   <div
                     className={
-                      service.id === "kids-clubs"
+                      service.id === "kids-clubs" || service.id === "school-trips"
                         ? "flex justify-center pt-10"
                         : "pt-4"
                     }
@@ -82,7 +92,9 @@ const ServicePage = () => {
                       className={
                         service.id === "summer-camps"
                           ? "w-full max-w-4xl rounded-3xl border border-border/50 object-contain shadow-lg"
-                        : service.id === "kids-clubs"
+                          : service.id === "school-trips"
+                            ? "w-full max-w-2xl rounded-3xl border border-border/50 object-contain shadow-lg"
+                          : service.id === "kids-clubs"
                             ? "w-full max-w-lg rounded-3xl border border-border/50 object-contain shadow-lg"
                             : "w-full max-w-3xl rounded-3xl border border-border/50 object-contain shadow-lg"
                       }
@@ -159,7 +171,7 @@ const ServicePage = () => {
               </div>
             ) : (
               <div className="grid items-start gap-4">
-                <div className="space-y-8">
+                <div className="space-y-12">
                   {service.instagramEmbedUrl && (
                     <div className="mx-auto w-full max-w-[450px]">
                       <h2 className="mb-4 text-xl font-semibold text-foreground">Instagram video</h2>
@@ -194,6 +206,18 @@ const ServicePage = () => {
                           </a>
                         ))}
                       </div>
+                      {service.id === "summer-camps" && (
+                        <p className="mt-5 max-w-3xl text-base leading-8 text-foreground/85 md:text-lg">
+                          Vyplnené prihlášky môžete posielať na{" "}
+                          <a
+                            href="mailto:t2boulder@centrum.sk"
+                            className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/80"
+                          >
+                            t2boulder@centrum.sk
+                          </a>{" "}
+                          alebo ich doniesť osobne na T2 Boulder Arenu.
+                        </p>
+                      )}
                     </div>
                   )}
 
@@ -203,9 +227,11 @@ const ServicePage = () => {
                         ? "mx-auto grid max-w-5xl grid-cols-1 gap-4 pt-28 sm:grid-cols-2"
                         : service.id === "kids-clubs"
                           ? "mx-auto grid max-w-4xl grid-cols-1 gap-4 pt-10 sm:grid-cols-2"
-                        : service.id === "rock-courses"
-                          ? "mx-auto grid max-w-3xl grid-cols-1 gap-4 pt-8 sm:grid-cols-2"
-                        : "grid grid-cols-1 gap-x-2 gap-y-1 pt-4 sm:grid-cols-2"
+                          : service.id === "school-trips"
+                            ? "mx-auto grid max-w-4xl grid-cols-1 gap-6 pt-12 sm:grid-cols-2 lg:grid-cols-3"
+                          : service.id === "rock-courses"
+                            ? "mx-auto grid max-w-3xl grid-cols-1 gap-4 pt-8 sm:grid-cols-2"
+                            : "mx-auto grid max-w-3xl grid-cols-1 gap-5 pt-8 sm:grid-cols-2"
                     }
                   >
                     {service.images.map((src, index) => (
@@ -219,9 +245,11 @@ const ServicePage = () => {
                               ? "h-72 w-full cursor-pointer rounded-3xl object-cover transition-transform duration-300 hover:scale-[1.01]"
                               : service.id === "kids-clubs"
                                 ? "h-80 w-full cursor-pointer rounded-3xl object-cover object-center transition-transform duration-300 hover:scale-[1.01]"
+                                : service.id === "school-trips"
+                                  ? "h-[28rem] w-full cursor-pointer rounded-3xl object-cover object-center transition-transform duration-300 hover:scale-[1.01]"
                                 : service.id === "rock-courses"
                                   ? "h-[24rem] w-full cursor-pointer rounded-3xl object-cover object-center transition-transform duration-300 hover:scale-[1.01]"
-                              : "h-44 w-full cursor-pointer rounded-3xl object-cover transition-transform duration-300 hover:scale-[1.01]"
+                                  : "h-[24rem] w-full cursor-pointer rounded-3xl object-cover object-center transition-transform duration-300 hover:scale-[1.01]"
                           }
                         />
                       </div>

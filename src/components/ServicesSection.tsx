@@ -12,8 +12,16 @@ const ServicesSection = () => (
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5 items-stretch">
         {services.map((s, i) => (
-          <AnimatedSection key={s.label} delay={i * 0.08} direction="scale" className="h-full">
-            <Link to={s.href} className="block h-full">
+          <AnimatedSection
+            key={s.label}
+            delay={i * 0.08}
+            direction="scale"
+            className={s.id === "school-trips" ? "h-full md:col-start-2 md:col-span-2 md:row-start-3" : "h-full"}
+          >
+            <Link
+              to={s.href}
+              className={s.id === "school-trips" ? "block h-full md:mx-auto md:w-full md:max-w-[calc(50%-0.625rem)]" : "block h-full"}
+            >
               <motion.div
                 whileHover={{ scale: 1.06, y: -6 }}
                 whileTap={{ scale: 0.97 }}
