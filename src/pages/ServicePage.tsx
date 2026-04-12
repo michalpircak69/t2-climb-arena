@@ -50,7 +50,15 @@ const ServicePage = () => {
           </a>
 
           <div className="space-y-8">
-            <div className={service.flyer ? "grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_440px]" : undefined}>
+            <div
+              className={
+                service.flyer
+                  ? service.id === "summer-camps"
+                    ? "grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_500px]"
+                    : "grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_440px]"
+                  : undefined
+              }
+            >
               <div
                 className={
                   service.id === "kids-clubs" || service.id === "school-trips" ? "space-y-5 text-center" : "space-y-3"
@@ -125,11 +133,15 @@ const ServicePage = () => {
               </div>
 
               {service.flyer && (
-                <div className="flex justify-center lg:justify-end">
+                <div className={service.id === "summer-camps" ? "flex justify-center pt-12 lg:justify-end" : "flex justify-center lg:justify-end"}>
                   <img
                     src={service.flyer}
                     alt={`Leták ${service.label}`}
-                    className="w-full max-w-[440px] rounded-3xl object-cover shadow-lg"
+                    className={
+                      service.id === "summer-camps"
+                        ? "w-full max-w-[500px] rounded-3xl object-cover shadow-lg"
+                        : "w-full max-w-[440px] rounded-3xl object-cover shadow-lg"
+                    }
                   />
                 </div>
               )}
