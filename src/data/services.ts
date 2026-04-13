@@ -5,6 +5,9 @@ import gallery4 from "@/assets/gallery-new-4.png";
 import gallery5 from "@/assets/gallery-new-5.png";
 import gallery6 from "@/assets/gallery-new-6.png";
 import gallery7 from "@/assets/gallery-new-7.png";
+import schoolTripGallery1 from "@/assets/school-trip-gallery-1.jpg";
+import schoolTripGallery2 from "@/assets/school-trip-gallery-2.jpg";
+import schoolTripGallery3 from "@/assets/school-trip-gallery-3.jpg";
 import kidsClubPhoto1 from "@/assets/detsky kruzok 1.jpg";
 import kidsClubPhoto2 from "@/assets/detsky kruzok 2.jpg";
 import kidsClubPhoto3 from "@/assets/detsky kruzok 3.jpg";
@@ -198,7 +201,7 @@ export const services: ServiceInfo[] = [
       "Počas celého programu je zabezpečený dohľad inštruktorov, potrebné vybavenie aj bezpečné zázemie pre skupinu.",
     ],
     secondaryImage: "/school-trip-flyer.jpg",
-    images: [gallery1, gallery4, gallery5],
+    images: [schoolTripGallery1, schoolTripGallery2, schoolTripGallery3],
   },
   {
     id: "rock-courses",

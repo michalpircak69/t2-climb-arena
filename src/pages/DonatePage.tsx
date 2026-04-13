@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DecorativeShapes from "@/components/DecorativeShapes";
+import { Button } from "@/components/ui/button";
 
 const supportPoints = [
   {
@@ -58,6 +59,23 @@ const DonatePage = () => (
           </div>
 
           <div className="mx-auto mt-12 max-w-4xl">
+            <div className="mb-8 flex justify-center">
+              <div className="max-w-3xl text-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="min-h-14 rounded-full px-8 text-base font-semibold shadow-lg shadow-primary/25 md:min-h-16 md:px-10 md:text-lg"
+                >
+                  <a href="/predvyplnene-vyhlasenie-t2.pdf" target="_blank" rel="noreferrer">
+                    Predvyplnené vyhlásenie
+                  </a>
+                </Button>
+                <p className="mt-4 text-sm leading-7 text-muted-foreground md:text-base">
+                  Vyplnené vyhlásenie treba odoslať HO Metropolu Košice a kópiu vyhlásenia odoslať na
+                  t2boulder@centrum.sk alebo osobne odovzdať na T2 Boulder aréne.
+                </p>
+              </div>
+            </div>
             <h2 className="text-center font-display text-3xl text-foreground md:text-4xl">
               Čo získate späť v každom chyte?
             </h2>
