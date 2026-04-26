@@ -229,6 +229,20 @@ const PricingSection = () => (
             </motion.div>
           </AnimatedSection>
         </div>
+
+        <AnimatedSection className="pt-6">
+          <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
+            <p className="max-w-3xl font-body text-lg font-medium text-foreground sm:text-xl">
+              Pri vstupe na T2 Boulder Arenu je možné využiť aj tieto služby
+            </p>
+            <motion.img
+              whileHover={{ y: -4 }}
+              src="/multisport-up-balansea.png"
+              alt="Možnosti vstupu cez MultiSport a Up Balansea"
+              className="w-full max-w-sm rounded-2xl border border-border bg-card shadow-md"
+            />
+          </div>
+        </AnimatedSection>
       </div>
     </div>
   </section>

@@ -203,6 +203,26 @@ const ServicePage = () => {
                     </div>
                   )}
 
+                  {service.termGroups && (
+                    <div className="pt-4">
+                      <h2 className="mb-5 text-3xl font-semibold text-foreground md:text-4xl">Termíny</h2>
+                      <div className="grid gap-4 md:grid-cols-2">
+                        {service.termGroups.map((group) => (
+                          <div key={group.month} className="rounded-3xl border border-border bg-card/80 p-6 shadow-sm">
+                            <h3 className="mb-4 text-2xl font-semibold text-foreground">{group.month}</h3>
+                            <div className="space-y-3">
+                              {group.dates.map((date) => (
+                                <p key={date} className="text-base font-medium text-foreground/90 md:text-lg">
+                                  {date}
+                                </p>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   {service.downloads && (
                     <div className="pt-10">
                       <h2 className="mb-5 text-3xl font-semibold text-foreground md:text-4xl">Prihlášky:</h2>

@@ -51,6 +51,7 @@ export interface ServiceInfo {
   extraBlockDescription?: string;
   extraBlockImage?: string;
   downloads?: { label: string; href: string }[];
+  termGroups?: { month: string; dates: string[] }[];
   sections?: ServiceSection[];
 }
 
@@ -151,6 +152,16 @@ export const services: ServiceInfo[] = [
     ],
     flyer: "/summer-camp-flyer.jpg",
     secondaryImage: "/summer-camp-schedule.png",
+    termGroups: [
+      {
+        month: "Júl",
+        dates: ["6.7-10.7.2026", "13.7-17.7.2026", "20.7-24.7.2026"],
+      },
+      {
+        month: "August",
+        dates: ["17.8-21.8.2026"],
+      },
+    ],
     downloads: [
       { label: "Prihláška PDF", href: "/prihlaska-tabor.pdf" },
       { label: "Prihláška ODT", href: "/prihlaska-tabor.odt" },
